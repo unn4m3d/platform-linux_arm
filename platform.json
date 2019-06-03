@@ -12,11 +12,21 @@
     "type": "git",
     "url": "https://github.com/platformio/platform-linux_arm.git"
   },
-  "version": "1.4.6",
+  "version": "1.4.7",
   "packageRepositories": [
     "https://dl.bintray.com/platformio/dl-packages/manifest.json",
     "http://dl.platformio.org/packages/manifest.json",
-    "http://repo.artik.cloud/artik/bin/pub/platformio/manifest.json"
+    {
+      "toolchain-gccarmlinuxgnueabi" : [
+        {
+          "sha1" : "a61a909b2944208a1cde1d8b96aa56cdaa27f1fd",
+          "description": "GCC for Linux ARM GNU EABI",
+          "system": "linux_x86_64",
+          "url": "https://dl.bintray.com/unn4m3d/toolchain-gccarmlinuxgnueabi/toolchain-gccarmlinuxgnueabi-linux-x86_64-1.50500.0.tar.gz",
+          "version": "1.50500.0"
+        }
+      ]
+    }
   ],
   "frameworks": {
     "wiringpi": {
@@ -31,7 +41,7 @@
   "packages": {
     "toolchain-gccarmlinuxgnueabi": {
       "type": "toolchain",
-      "version": "~1.40802.0"
+      "version": "<1.50501"
     },
     "framework-wiringpi": {
       "type": "framework",
